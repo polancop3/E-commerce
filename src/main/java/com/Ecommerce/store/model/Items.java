@@ -15,11 +15,11 @@ public class Items {
     private double price;
     private String description;
 
-    public Items(Integer id, String name, double price, String description) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.description = description;
+    public Items(/*Integer id, String name, double price, String description*/) {
+//        this.id = id;
+//        this.name = name;
+//        this.price = price;
+//        this.description = description;
     }
 
     public Integer getId() {
