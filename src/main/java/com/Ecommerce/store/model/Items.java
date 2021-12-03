@@ -10,7 +10,9 @@ public class Items {
     @Id //this say that field below is  primary key
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String name;
+    private String title;
+    private String description;
+    private String img;
     private double price;
 
     public Items() {
@@ -24,12 +26,12 @@ public class Items {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.title = title;
     }
 
     public double getPrice() {
@@ -40,4 +42,19 @@ public class Items {
         this.price = price;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
 }
