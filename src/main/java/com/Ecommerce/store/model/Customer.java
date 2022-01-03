@@ -1,18 +1,21 @@
 package com.Ecommerce.store.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+import javax.persistence.*;
+@CrossOrigin
 @Entity
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    @Column(nullable = false)
     private String firstName;
+    @Column(nullable = false)
     private String lastName;
+    @Column( unique = true, nullable = false)
     private String email;
+    @Column(nullable = false)
     private String password;
 
     public String getPassword() {

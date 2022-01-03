@@ -11,4 +11,6 @@ public class Cart {
     @GeneratedValue( strategy = GenerationType.AUTO)
     private Integer id;
     private ArrayList<Items> items;
+
+    //needs to be fixed
 }

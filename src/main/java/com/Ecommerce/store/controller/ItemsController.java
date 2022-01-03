@@ -7,12 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RestController
-@RequestMapping(path = "/demo")
+@RequestMapping(path = "/")
 public class ItemsController {
     @Autowired
     private ItemsRepository itemsRepository;
 
-    @PostMapping
+    @PostMapping(path = "/addItem")
     public Items createItems(@RequestBody Items item){
         return itemsRepository.save(item);
     }
@@ -22,7 +22,7 @@ public class ItemsController {
         return itemsRepository.findAll();
     }
 
-    @PatchMapping
+    @PatchMapping(path = "/updateItem")
     public Items updateItems (@RequestBody Items item){ return  itemsRepository.save(item);}
 
     @DeleteMapping(path = "/{id}")
